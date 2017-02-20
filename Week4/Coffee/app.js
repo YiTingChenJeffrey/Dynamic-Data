@@ -130,7 +130,7 @@ server.route({
         reply.view('index4', {
             title: 'Jeffreys coffeeshop',
             message: 'finally jeffrey says "' +  request.params.var2  + ' " and he gets his ' +  request.params.var,
-            pic:'/images/' + request.params.var2 + '.jpg',
+            
          });
     }
 });

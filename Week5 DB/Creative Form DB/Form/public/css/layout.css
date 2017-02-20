@@ -1,0 +1,57 @@
+html body{
+    background-color: dodgerblue;
+    font-family: "Comic Sans MS",cursive,sans-serif;
+}
+
+html h1{
+    font-size: 30px;
+}
+#one img{
+    
+    width: 100px;
+    margin-left: 200px;
+    margin-right:50px;
+}
+
+#one {
+    color: gold;
+    font-size: 40px;
+}
+
+#four {
+    color: gold;
+    font-size: 40px;
+    text-align: center;
+}
+
+#two img{
+    border-radius: 25px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#mainForm{
+    border-radius: 25px;
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#male{
+    margin-left: 10px;
+}
+
+
+
+#three{
+    margin-top: 200px;
+}
+
+.clear{
+    clear: both;
+}
+
+
