@@ -1,0 +1,6 @@
+<div id="mainRes">
+
+    {{#if dbresponse}} {{#all dbresponse}} {{id}} : {{fullname}} : {{gender}} : {{email}} : {{cars}} : {{points1}}: {{points2}}: {{points3}}: {{points4}}: {{points5}}: {{points6}}: {{img}}<a href="/update/{{id}}">update</a> <a href="/delete/{{id}}">delete</a>
+    <br> {{/all}} {{/if}}
+
+</div>
