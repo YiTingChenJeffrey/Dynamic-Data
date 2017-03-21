@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+
+    <title> Radar Chart Result </title>
+    <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
+    
+   <style>
+       #radarChart{
+           width: 500px;
+           height: 500px;
+           max-height: 600px;
+           max-width: 600px;
+       }
+    
+    
+    
+    
+    
+    
+    </style>
+    </head>
+    <body>
+        <canvas id="radarChart" width="500" height="500"></canvas>
+        
+        <script>
+            var ctx = document.getElementById("radarChart");
+            
+            fetch('http://localhost:3000/getdata')
+               .then(function(response){
+                  return response.json();
+              }).then(function(data){
+                   console.log(data);                    
+                    
+                var dataset = [];
+                
+                
+                for(var i=0;i<data.length;i++){
+                    dataset[i] = {
+                            label: 'Student ' + i + ' Data',
+                            data: [data[i].storename,data[i].storeaddress,data[i].storecity,data[i].storestate,data[i].storeowner,data[i].otherInfo],
+                            backgroundColor: 'rgb('+(i*5+100)+','+i*20+',0)',
+                    }
+                }
+              
+                var radarChart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ["English","Math","Science","History","PE","Computer"],
+                        datasets: dataset
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+         }
+            )
+                    
+                    
+                    
+//                    var data = {
+//                    labels:["English","Math","Science","History","PE","Computer"],
+//                    datasets:[
+//                    {
+//                     label: "My First dataset",
+//            backgroundColor: "rgba(179,181,198,0.2)",
+//            borderColor: "rgba(179,181,198,1)",
+//            pointBackgroundColor: "rgba(179,181,198,1)",
+//            pointBorderColor: "#fff",
+//            pointHoverBackgroundColor: "#fff",
+//            pointHoverBorderColor: "rgba(179,181,198,1)",
+//            data: [65, 59, 90, 81, 56, 55, 40]
+//                    }
+//                    ]
+//                    }
+//                   
+//                   var myRadarChart = new Chart (ctx,{
+//                    type: 'radar',
+//                    data: data,
+//                    options:options
+//                    })
+//                   )
+            
+        </script> 
+    </body>
+</html>
