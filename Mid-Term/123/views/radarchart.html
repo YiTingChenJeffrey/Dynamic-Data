@@ -38,13 +38,20 @@
                    console.log(data);                    
                     
                 var dataset = [];
-                
+                var color = [        
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)']
                 
                 for(var i=0;i<data.length;i++){
                     dataset[i] = {
                             label: 'Student ' + i + ' Data',
                             data: [data[i].storename,data[i].storeaddress,data[i].storecity,data[i].storestate,data[i].storeowner,data[i].otherInfo],
-                            backgroundColor: 'rgb('+(i*5+100)+','+i*20+',0)',
+                            backgroundColor: color[i],
+                            //borderColor: 'rgba('+(i*50+10)+','+i*20+',0,1)',
                     }
                 }
               
