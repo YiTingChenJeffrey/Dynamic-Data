@@ -36,6 +36,12 @@ var sequelize = new Sequelize('db', 'username', 'password', {
 });
 
 var locations = sequelize.define('data', {
+    term:{
+        type: Sequelize.STRING
+    },
+    studentname:{
+        type: Sequelize.STRING
+    },
     storename: {
         type: Sequelize.STRING
     },
@@ -238,6 +244,106 @@ server.route({
 //       });
         
         reply.view('radarchart', null, {
+            layout:'none'
+        });
+    }
+    
+});
+
+server.route({
+    method:'GET',
+    path:'/radarChart1',
+    handler:function(request,reply){
+//      var formresponse = JSON.stringfy(request.payload);
+//      var parsing = JSON.parse(formresponse);
+//        
+//      var data = {};
+//       locations.findAll().then(function(ha){
+//           data = JSON.parse(JSON.stringify(ha));
+//            console.log(data);
+//       });
+        
+        reply.view('radarchart1', null, {
+            layout:'none'
+        });
+    }
+    
+});
+
+server.route({
+    method:'GET',
+    path:'/barChart',
+    handler:function(request,reply){
+//      var formresponse = JSON.stringfy(request.payload);
+//      var parsing = JSON.parse(formresponse);
+//        
+//      var data = {};
+//       locations.findAll().then(function(ha){
+//           data = JSON.parse(JSON.stringify(ha));
+//            console.log(data);
+//       });
+        
+        reply.view('barchart', null, {
+            layout:'none'
+        });
+    }
+    
+});
+
+server.route({
+    method:'GET',
+    path:'/barChart1',
+    handler:function(request,reply){
+//      var formresponse = JSON.stringfy(request.payload);
+//      var parsing = JSON.parse(formresponse);
+//        
+//      var data = {};
+//       locations.findAll().then(function(ha){
+//           data = JSON.parse(JSON.stringify(ha));
+//            console.log(data);
+//       });
+        
+        reply.view('barchart2', null, {
+            layout:'none'
+        });
+    }
+    
+});
+
+server.route({
+    method:'GET',
+    path:'/line',
+    handler:function(request,reply){
+//      var formresponse = JSON.stringfy(request.payload);
+//      var parsing = JSON.parse(formresponse);
+//        
+//      var data = {};
+//       locations.findAll().then(function(ha){
+//           data = JSON.parse(JSON.stringify(ha));
+//            console.log(data);
+//       });
+        
+        reply.view('linechart', null, {
+            layout:'none'
+        });
+    }
+    
+});
+
+server.route({
+    method:'GET',
+    path:'/line1',
+    handler:function(request,reply){
+//      var formresponse = JSON.stringfy(request.payload);
+//      var parsing = JSON.parse(formresponse);
+//        
+//      var data = {};
+//       locations.findAll().then(function(ha){
+//           data = JSON.parse(JSON.stringify(ha));
+//            console.log(data);
+//       });
+        
+        reply.view('linechart1', null, {
             layout:'none'
         });
     }

@@ -36,7 +36,7 @@
     </head>
     <body id = "fourth" background = "images/logo4.png">
        <div class="col-sm-12" id="chart2">Fall Semester Chart Result <br> You can select through the following chart options<br><a href ="/displayAll">Click Here to Edit Scores!</a></div> 
-       
+      
        <br>
         <div class="col-sm-2" id="chart1"><a href = "/radarChart">Radar Chart</a></div> 
         <div class="col-sm-2" id="chart1"><a href = "/barChart">Bar Chart</a></div>  
@@ -81,7 +81,7 @@
                 }
               
                 var radarChart = new Chart(ctx, {
-                    type: 'radar',
+                    type: 'line',
                     data: {
                         labels: ["English","Math","Science","History","PE","Computer"],
                         datasets: dataset
